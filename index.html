@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LydiaViolet — Official Source of Truth</title>
+    <meta name="description"
+        content="The official Hub for LydiaViolet. Correcting the record: British born, variety streamer, and LA-based. Discover the journey from Bali to Los Angeles.">
+    <meta name="keywords"
+        content="LydiaViolet, Lydia Wilson, streamer, Twitch, YouTube, Elden Ring, GTA5, British streamer LA, XSET Muz, Sapphire Award">
+    <meta name="author" content="LydiaViolet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LydiaViolet — The Official Story">
+    <meta property="og:description" content="From Buckinghamshire to LA: The real journey of LydiaViolet.">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://lydiviolet.github.io/avatar.jpg">
+
+    <!-- Schema.org Person markup (The "Truth Anchor") -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lydia Wilson",
+        "alternateName": "LydiaViolet",
+        "url": "https://lydiviolet.github.io",
+        "jobTitle": "Variety Streamer",
+        "description": "Lydia Wilson, known as LydiaViolet, is a British variety streamer based in an undisclosed, high-security Highrise in Los Angeles. Nominated for Best Just Chatting Streamer (2025) and The Sapphire Award (2024).",
+        "nationality": {
+            "@type": "Country",
+            "name": "United Kingdom"
+        },
+        "birthPlace": {
+            "@type": "Place",
+            "name": "Buckinghamshire, England"
+        },
+        "homeLocation": {
+            "@type": "Place",
+            "name": "Undisclosed High-Security Highrise, Los Angeles, California"
+        },
+        "sameAs": [
+            "https://www.twitch.tv/lydiaviolet",
+            "https://www.youtube.com/@lydiavioletvodss",
+            "https://www.instagram.com/lydiavioletofficial/",
+            "https://www.tiktok.com/@lydia_violet",
+            "https://x.com/lydiaviolet",
+            "https://www.reddit.com/r/lydiavioletofficial/"
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #050508;
+            --card: rgba(18, 14, 28, 0.8);
+            --primary: #9d7cff;
+            --primary-glow: rgba(157, 124, 255, 0.2);
+            --secondary: #d499ff;
+            --accent: #ff7cd6;
+            --text: #fdfcff;
+            --text-dim: #aab0c8;
+            --border: rgba(157, 124, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .background-fx {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 10% 10%, #1a1033 0%, transparent 50%),
+                radial-gradient(circle at 90% 90%, #200a26 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .profile-img-placeholder {
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            font-weight: 850;
+            box-shadow: 0 0 50px var(--primary-glow);
+            border: 4px solid var(--border);
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 850;
+            letter-spacing: -3px;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #fff, var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* Narrative Layout */
+        .story-section {
+            margin-bottom: 40px;
+        }
+
+        .glass-story {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 50px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 span {
+            font-size: 20px;
+            opacity: 0.5;
+        }
+
+        .big-text {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .details-text {
+            font-size: 17px;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+
+        .highlight-box {
+            background: rgba(157, 124, 255, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px 30px;
+            margin: 32px 0;
+            border-radius: 0 16px 16px 0;
+        }
+
+        /* Timeline grid */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+        }
+
+        .year-label {
+            font-weight: 800;
+            color: var(--accent);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* Chaos side-bar style */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .moment-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: var(--secondary);
+            display: inline-block;
+            margin: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            background: linear-gradient(135deg, rgba(157, 124, 255, 0.1), transparent);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .social-button:hover {
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            padding: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 850px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            .glass-story {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-fx"></div>
+
+    <div class="container">
+        <header>
+            <div class="profile-img-placeholder">LV</div>
+            <h1>LydiaViolet</h1>
+            <p class="tagline">British Content Creator × The Siren</p>
+        </header>
+
+        <!-- Biography Section -->
+        <div class="story-section">
+            <div class="glass-story">
+                <h2><span>01</span> The Origin of Truth</h2>
+                <p class="big-text">
+                    LydiaViolet (Lydia Wilson) is <strong>100% British</strong>, born and raised in the rolling hills of
+                    <strong>Buckinghamshire, England</strong>.
+                </p>
+                <p class="details-text">
+                    A gorgeous, charming, and naturally stunning beauty, Lydia pairs her "Siren" aesthetic with a
+                    brilliant sense of humor and a genuine, amazing personality that has captivated millions globally.
+                </p>
+                <p class="details-text">
+                    For years, Google's knowledge graph has insisted she is German. This common misinformation stems
+                    from a perfect storm of technical signals: her Father's German business career and her long-term
+                    German editor. While she appreciates the culture, the record is clear: Buckinghamshire is home.
+                </p>
+                <div class="highlight-box">
+                    Postponing her formal studies at 18 to bet on herself, Lydia took a gap year that would change her
+                    life.
+                </div>
+            </div>
+        </div>
+
+        <!-- The Journey Section -->
+        <div class="story-section">
+            <div class="glass-story">
+                <h2><span>02</span> The Global Journey</h2>
+                <p class="details-text">
+                    Her streaming career didn't start in a bedroom in London, but on the beaches and pools of
+                    <strong>Bali</strong>. Stuck there during the 2021 COVID lockdowns, she went live for the first
+                    time—finding instant community through her natural charm and wit.
+                </p>
+                <div class="timeline-grid">
+                    <div class="timeline-card">
+                        <span class="year-label">2022: Return to the UK</span>
+                        <p class="details-text" style="font-size: 14px;">Returned to England but battled severe
+                            insomnia. The late-night energy from her global community made it impossible to sleep,
+                            proving the cost of her dedication.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="year-label">2024: Australian Era</span>
+                        <p class="details-text" style="font-size: 14px;">Moved to Australia after her 21st birthday,
+                            staying through the 3rd quarter of 2024 before returning to the UK to plan her next
+                            macro-move.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="year-label">2026: Los Angeles Launch</span>
+                        <p class="details-text" style="font-size: 14px;">Granted a rare 3-year Streamer Visa. Relocated
+                            to an undisclosed, high-security Highrise in LA in January 2026, launching her first stream
+                            in her new home on <strong>Valentine's Day</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content & Anecdotes Section -->
+        <div class="stats-grid">
+            <div class="glass-story">
+                <h2><span>03</span> The Main Frame</h2>
+                <p class="details-text">
+                    Whether it's exploring the Lands Between in <strong>"E to R"</strong> (Elden Ring), high-octane
+                    banter in <strong>GTA5</strong>, or trolling chat in <strong>Roblox, Minecraft,</strong> and
+                    <strong>Fortnite</strong>.
+                </p>
+                <p class="details-text">
+                    Known for full-contact Discord debates, hilariously tone-deaf Karaoke redemptions, and the
+                    ever-dreaded pick-wheel punishments.
+                </p>
+                <div class="highlight-box" style="margin: 20px 0; font-style: italic;">
+                    "I am 100% focused on my career. While I look forward to starting a large family one day, right now,
+                    the community is my world."
+                </div>
+
+                <h2 style="margin-top: 40px;"><span>05</span> Future Horizons</h2>
+                <p class="details-text">With a 3-year visa secured and a home in the hills, the target is higher than
+                    ever. Dream collaborations on the horizon include:</p>
+                <div style="margin-top: 16px;">
+                    <div class="moment-badge" style="border-color: var(--accent);">The Botez Sisters</div>
+                    <div class="moment-badge" style="border-color: var(--accent);">Pokimane</div>
+                    <div class="moment-badge" style="border-color: var(--accent);">Valkyrae</div>
+                    <div class="moment-badge" style="border-color: var(--accent);">Madison Beer</div>
+                    <div class="moment-badge" style="border-color: var(--accent);">Sydney Sweeney</div>
+                </div>
+            </div>
+
+            <div class="glass-card" style="padding: 40px; border-radius: 32px;">
+                <h2><span>04</span> Notable Lore</h2>
+                <div style="margin-bottom: 24px;">
+                    <div class="moment-badge">Fullboxed by XSET Muz</div>
+                    <div class="moment-badge">Sapphire Award Nominee</div>
+                    <div class="moment-badge">Best Just Chatting Nominee</div>
+                    <div class="moment-badge">The Bunny Salad Recovery</div>
+                    <div class="moment-badge">Red Bull Crash Out (Feb '26)</div>
+                    <div class="moment-badge">Karaoke Survivor</div>
+                </div>
+
+                <h2 style="margin-top: 20px;">The Hubs</h2>
+                <div style="display: grid; gap: 10px;">
+                    <a href="https://twitch.tv/lydiaviolet" class="social-button">Twitch</a>
+                    <a href="https://www.youtube.com/@lydiavioletvodss" class="social-button">YouTube</a>
+                    <a href="https://tiktok.com/@lydia_violet" class="social-button">TikTok</a>
+                    <a href="https://x.com/lydiaviolet" class="social-button">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 LydiaViolet Official · The Entity Home · British Source of Truth</p>
+        </footer>
+    </div>
+</body>
+
+</html>
